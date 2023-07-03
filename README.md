@@ -90,3 +90,10 @@ Disable inheritance -> Remove All
 New Permissions -> Everyone -> All
 
 </p>
+<br/>
+
+<p> <img src="https://i.imgur.com/A9tadBu.png" height="80%" width="80%" alt="set up heidi SQL"  </p>
+ <p>
+Open Heidi SQL which was installed earlier and create a new session. After making a password Connect to the session.
+then Create a database called “osTicket”.
+</P>
