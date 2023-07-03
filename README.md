@@ -5,11 +5,6 @@
 <h1>osTicket - Prerequisites and Installation</h1>
 This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
 
-
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: How To Install osTicket with Prerequisites](https://www.youtube.com)
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -22,34 +17,76 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+- PHP Manager for IIS 
+-  Rewrite Module 
+-  PHP 7.3.8
+- VC_redist.x86.exe.
+- MySQL 5.5.62
+- osTicket v1.15.8
+- HeidiSQL
+
+
 
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/fSjSQno.png" alt="Install / Enable IIS"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Install / Enable IIS in Windows with CGI and common HTTP features and IIS Management Console. This can be found after going to the control panel in windows and selecting programs. Then select "turn windows features on or off".
+
+
+</p>
+<br />
+
+<P>
+<img src="https://i.imgur.com/Q9gvV0C.png" alt="create PHP directory"/>
+
+<p>
+Create the directory C:\PHP and extract PHP 7.3.8 into it
+
+</p>
+
+<br/>
+
+<p>
+<img src="https://i.imgur.com/YCDGNKb.png" height="80%" width="80%" alt="osTIcket Prerequisites"/>
+</p>
+<p>
+Download the other prerequisite applications in order to run osTicket 
+ - PHP Manager for IIS 
+-  Rewrite Module 
+- VC_redist.x86.exe.
+- MySQL 5.5.62
+- osTicket v1.15.8
+- HeidiSQL
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/U27xXmo.png" height="80%" width="80%" alt="regiser PHP"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+Open IIS as an Admin and Register PHP from within IIS. Then Reload IIS or (Open IIS, Stop and Start the server). After registering PHP make sure to Click “Enable or disable an extension”.
+<ul> 
+  <li>Enable: php_imap.dll</li>
+ <li>Enable: php_intl.dll</li>
+   <li>Enable: php_opcache.dll</li>
+</ul>
+  Refresh the osTicket site in your browseand observe the changes.
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
+<p>
+  <img src="https://i.imgur.com/e2D6MRl.png" height="80%" width="80%" alt="renaming ost file"/>
+</p>
+<p>
+  Rename: ost-sampleconfig.php 
+From: C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
+To: C:\inetpub\wwwroot\osTicket\include\ost-config.php
+right click on ost-config.php and select properties -> security 
+Assign Permissions: ost-config.php
+Disable inheritance -> Remove All
+New Permissions -> Everyone -> All
+
+</p>
