@@ -5,7 +5,7 @@
 <h1>Installation of osTicket and prerequisites</h1>
 This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.
 All of the following steps were done on a  VM (Virtual Machine) created using the Microsoft Azure cloud services.
-The VM was set up and connected to using Microsoft remote Desktop beforehand. The VM is running the Windows 10 operating system.
+The VM was set up and connected using Microsoft remote Desktop beforehand. The VM is running the Windows 10 operating system.
 
 
 <br/>
@@ -41,7 +41,7 @@ The VM was set up and connected to using Microsoft remote Desktop beforehand. Th
 <p>
  <h2>Install / Enable IIS </h2>
 Install / Enable IIS in Windows with CGI and common HTTP features and IIS Management Console. <br> 
- This can be found after going to the control panel in windows and selecting programs -> Then select "turn windows features on or off".
+ This can be found after going to the control panel in Windows and selecting programs -> Then select "turn Windows features on or off".
 
 
 </p>
@@ -52,7 +52,7 @@ Install / Enable IIS in Windows with CGI and common HTTP features and IIS Manage
 
 <p> 
  <h2>Create Directory C:\PHP</h2>
-Go to "This PC" in File Explorer and Create the directory C:\PHP and extract PHP 7.3.8 into it.
+Go to "This PC" in File Explorer and create the directory C:\PHP and extract PHP 7.3.8 into it.
 
 </p>
 
@@ -63,7 +63,7 @@ Go to "This PC" in File Explorer and Create the directory C:\PHP and extract PHP
 </p>
 <p>
  <h2>osTicket Prerequisites</h2>
-Download rest of prerequisite applications in order to run osTicket 
+Download the rest of the prerequisite applications in order to run osTicket 
 <ul> 
  <li>PHP Manager for IIS </li>
  <li>Rewrite Module </li>
@@ -86,7 +86,7 @@ Open IIS as an Admin and Register PHP from within IIS. Then Reload IIS or (Open 
  <li>Enable: php_intl.dll</li>
    <li>Enable: php_opcache.dll</li>
 </ul>
- Finally refresh the osTicket site in your browser.
+ Finally, refresh the osTicket site in your browser.
 
 </p>
 <br />
@@ -98,8 +98,8 @@ Open IIS as an Admin and Register PHP from within IIS. Then Reload IIS or (Open 
 </p>
 <p>
  <h2>Rename: ost-sampleconfig.php </h2> 
-From: C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php <br>
-To: C:\inetpub\wwwroot\osTicket\include\ost-config.php <br>
+From: C:\inetpub\wwwroot\osTicket\include\<b>ost-sampleconfig.php</b> <br>
+To: C:\inetpub\wwwroot\osTicket\include\<b>ost-config.php </b><br>
 right click on ost-config.php and select properties then the tab named "security" <br>
 Assign Permissions: ost-config.php <br>
 Disable inheritance and select Remove All <br>
@@ -119,9 +119,9 @@ Then Create a database called “osTicket”; which will be the database that is
 
    <p>
     <h2> Finish Setting up osTicket In Browser</h2>
-   Fill in all the required fields (helpdesk name, admin username and password, etc.)
+   Fill in all the required fields (helpdesk name, admin username, password, etc.)
     The last step should be connecting to the SQL database that was just created.
-    The following are what I used to fill in these fields.
+    The following is what I used to fill in these fields.
 
 <ul>
 <li style="list-style-type:square"> MySQL Database: osTicket  </li>
@@ -142,7 +142,7 @@ Then Create a database called “osTicket”; which will be the database that is
 <h2>osTicket Installed</h2></p>
 <p>
  Now using the URL http://localhost/osTicket/scp/login.php you should be taken to login screen osTicket.
-Hopefully if everything was done correctly osTicket should now be installed and ready to start creating tickets.
+Hopefully, if everything was done correctly osTicket should now be installed and ready to start creating tickets.
 </p>
 
 
